@@ -8,11 +8,11 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the frontend directory
-app.use(express.static(path.join(__dirname, 'Time-Slot-Booking/frontend')));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Handle root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Time-Slot-Booking/frontend/index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 let slots = [
